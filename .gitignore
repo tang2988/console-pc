@@ -8,7 +8,7 @@
 .rar
 .idea
 *.iml
-.settings/*
+#.settings/*
 .checkstyle/*
 /indexes/*
 /target/*
