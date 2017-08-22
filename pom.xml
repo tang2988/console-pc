@@ -132,12 +132,6 @@
 			<version>${validator.version}</version>
 		</dependency>
 
-		<!-- redis -->
-		<dependency>
-			<groupId>redis.clients</groupId>
-			<artifactId>jedis</artifactId>
-			<version>${jedis.version}</version>
-		</dependency>
 
 		<!-- AOP begin -->
 		<dependency>
@@ -391,34 +385,6 @@
 			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
-
-
-       <!-- pdf使用 start -->
-       <dependency>
-         <groupId>com.hsd.other</groupId>
-         <artifactId>pd4l_demo</artifactId>
-         <version>1.0</version>
-       </dependency>
-       
-       <dependency>
-         <groupId>com.hsd.other</groupId>
-         <artifactId>ss_css2</artifactId>
-         <version>1.0</version>
-         <scope>compile</scope>
-         <exclusions>
-           <exclusion>
-             <artifactId>*</artifactId>
-             <groupId>*</groupId>
-           </exclusion>
-         </exclusions>
-       </dependency>
-       <dependency>
-           <groupId>com.hsd.other</groupId>
-           <artifactId>fonts</artifactId>
-           <version>1.0</version>
-       </dependency>
-       <!-- pdf使用 end -->
-
 
 	</dependencies>
     
