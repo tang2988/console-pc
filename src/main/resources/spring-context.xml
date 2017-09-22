@@ -46,7 +46,7 @@
 	</bean>
 
 	<bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.heshidai.**.dao" />
+		<property name="basePackage" value="com.heshidai.gold.console.common.dao,com.heshidai.gold.console.module.sys.dao" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 

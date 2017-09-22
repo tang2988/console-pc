@@ -16,5 +16,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
         "classpath*:/spring-dubbo*.xml" })
 // 加载配置文件
 public class BaseJunit4Test {
+	
+
     
 }
