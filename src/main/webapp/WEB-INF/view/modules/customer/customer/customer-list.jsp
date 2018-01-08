@@ -53,19 +53,12 @@
  <br />
    注册时间：<input id="registerTimeStart" type="text" onFocus="WdatePicker({dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'registerTimeEnd\')||\'2020-10-01\'}'})"/> - 
        <input id="registerTimeEnd" type="text" onFocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'registerTimeStart\')}',maxDate:'2020-10-01'})"/> &nbsp;
- <span style="margin-left: 22px;">是否合时代用户：</span><select id="p2pFlag" ltype="select">
-     <!-- 是否合时代用户：10-是;20-不是  -->
-	    <option value="">请选择</option>
-	    <option value="10">是</option>
-	    <option value="20">否</option>
-   </select> &nbsp;
    
    年龄：<input id="ageStart" type="text" style="width: 59px;"/> - <input id="ageEnd" type="text" style="width: 58px;"/> &nbsp;
  <br />
  
    首次充值时间：<input id="firstRechargeTimeStart" type="text" onFocus="WdatePicker({dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'firstRechargeTimeEnd\')||\'2020-10-01\'}'})"/> - 
        <input id="firstRechargeTimeEnd" type="text" onFocus="WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'firstRechargeTimeStart\')}',maxDate:'2020-10-01'})"/> &nbsp;
-   &nbsp; &nbsp;合时代用户名：<input id="p2pUsername" type="text" /> &nbsp; 
  <br />
  
    首次投资时间：<input id="firstInvestTimeStart" type="text" onFocus="WdatePicker({dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'firstInvestTimeEnd\')||\'2020-10-01\'}'})"/> - 
@@ -78,14 +71,12 @@
   <br />
   
     <span style="margin-left: 22px;">注册来源：</span><select id="registerDataFrom" ltype="select">
-     <!-- 是否合时代用户：10-是;20-不是  -->
 	    <option value="">请选择</option>
 	    <option value="10">本站</option>
 	    <option value="20">P2P</option>
    </select> &nbsp;
    
    <span style="margin-left: 22px;">客户端：</span><select id="registerClientType" ltype="select">
-     <!-- 是否合时代用户：10-是;20-不是  -->
 	    <option value="">请选择</option>
 	    <option value="10">PC</option>
 	    <option value="20">微信</option>

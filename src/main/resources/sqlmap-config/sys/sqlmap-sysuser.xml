@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<mapper namespace="com.heshidai.gold.console.module.sys.dao.UserDAO">
+<mapper namespace="com.tang2988.gold.console.module.sys.dao.UserDAO">
 	
     <!-- 用户信息字段 -->
     <sql id="userFields">
@@ -23,7 +23,7 @@
     </sql>
     
     <!-- 根据id查询用户信息 -->
-    <select id="findById" resultType="com.heshidai.gold.console.module.sys.entity.SysUser">
+    <select id="findById" resultType="com.tang2988.gold.console.module.sys.entity.SysUser">
         select <include refid="userFields" />,
                b.id as organId,
                b.name as organName
@@ -33,7 +33,7 @@
     </select>
 	
 	<!-- 根据用户名查询用户相关信息 -->
-	<select id="getByLoginName" resultType="com.heshidai.gold.console.module.sys.entity.ShiroUser">
+	<select id="getByLoginName" resultType="com.tang2988.gold.console.module.sys.entity.ShiroUser">
         select id, 
                organId,
 		       realName, 
@@ -52,7 +52,7 @@
 	</select>
     
     <!-- 查询可用的用户信息列表 -->
-	<select id="findUserList" resultType="com.heshidai.gold.console.module.sys.entity.SysUser">
+	<select id="findUserList" resultType="com.tang2988.gold.console.module.sys.entity.SysUser">
 		   SELECT <include refid="userFields" />,
                   b.name as organName,
                   c.mobilePhone
@@ -132,7 +132,7 @@
     </update>
     
     <!-- 查询登录用户名是否存在 -->
-    <select id="getSysUserByLoginName" resultType="com.heshidai.gold.console.module.sys.entity.SysUser">
+    <select id="getSysUserByLoginName" resultType="com.tang2988.gold.console.module.sys.entity.SysUser">
         select <include refid="userFields" />
         from t_sys_user a 
         where a.loginName=#{loginName}

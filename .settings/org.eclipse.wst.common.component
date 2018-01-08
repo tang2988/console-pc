@@ -4,6 +4,18 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="jdemo-Security-0.0.2-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jdemo-Security/jdemo-Security">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jdemo-resource-0.0.2-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jdemo-resource/jdemo-resource">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jdemo-RegExp-0.0.2-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jdemo-RegExp/jdemo-RegExp">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jdemo-Jdbc-0.0.2-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jdemo-Jdbc/jdemo-Jdbc">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="hsdgold-console-pc"/>
         <property name="java-output-path" value="/hsdgold-console-pc/src/main/webapp/WEB-INF/classes"/>
         <property name="component.exclusion.patterns" value="WEB-INF/classes/config/**"/>

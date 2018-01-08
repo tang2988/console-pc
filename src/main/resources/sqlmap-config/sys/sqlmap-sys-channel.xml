@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<mapper namespace="com.heshidai.gold.console.module.sys.dao.ChannelDAO">
+<mapper namespace="com.tang2988.gold.console.module.sys.dao.ChannelDAO">
 	
     <!-- 渠道全字段 -->
     <sql id="allFields">
@@ -16,7 +16,7 @@
     </sql>
     
     <!-- 根据id查询信息 -->
-    <select id="findById" resultType="com.heshidai.gold.console.module.sys.entity.Channel">
+    <select id="findById" resultType="com.tang2988.gold.console.module.sys.entity.Channel">
         select <include refid="allFields" />,
                b.mobilePhone,
                c.name as organName,
@@ -30,7 +30,7 @@
     </select>
 	
     <!-- 根据父id查询渠道  -->
-    <select id="findByParentId" resultType="com.heshidai.gold.console.module.sys.entity.Channel">
+    <select id="findByParentId" resultType="com.tang2988.gold.console.module.sys.entity.Channel">
         select <include refid="allFields"/>,
                b.mobilePhone,
                c.name as organName
@@ -41,7 +41,7 @@
     </select>
     
     <!-- 查询部门名称是否已存在 -->
-    <select id="getByNameAndParentId" resultType="com.heshidai.gold.console.module.sys.entity.Channel">
+    <select id="getByNameAndParentId" resultType="com.tang2988.gold.console.module.sys.entity.Channel">
        select <include refid="allFields"/> 
        from t_sys_channel a
        where a.channelName=#{channelName}

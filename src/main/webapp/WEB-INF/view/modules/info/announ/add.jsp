@@ -9,6 +9,9 @@
 
 <%@ include file="../../../include/head.jsp"%>
 
+<link rel="stylesheet" href="${ctx }/static/plugins/kindeditor/themes/default/default.css" />
+<script charset="utf-8" src="${ctx }/static/plugins/kindeditor/kindeditor-min.js"></script>
+<script charset="utf-8" src="${ctx }/static/plugins/kindeditor/lang/zh_CN.js"></script>
 <link href="${ctxStatic}/ligerUI/lib/ligerUI/skins/Gray/css/all.css"
 	rel="stylesheet" type="text/css" />
 <style type="text/css">
@@ -65,7 +68,8 @@ body {
 			<tr>
 				<td align="right" class="l-table-edit-td">内容:&nbsp;&nbsp;<span
 					style="color:red;">*</span></td>
-				<td align="left" class="l-table-edit-td"><input name="content" type="text" id="content"  /></td>
+				<td align="left" class="l-table-edit-td">
+ 				<textarea name="content" id="content" cols="100" rows="5"></textarea></td>
 			</tr>
 
 			<tr>
@@ -95,6 +99,8 @@ body {
 <script type="text/javascript">
         // 保存数据
         function saveFrom(){
+        	//alert(editor.html());
+        	$("#content").text(editor.html());
         	$.post("${ctx}/Announcement/add.do", $("#form1").serialize(), function (msg) { 
                 if(msg=="true"){
                 	$.ligerDialog.success("保存成功", "", function(){
@@ -109,5 +115,21 @@ body {
             
         }
         
-    </script>
+		var editor;
+		KindEditor.ready(function(K) {
+			editor = K.create('textarea[name="content"]', {
+				resizeType : 1,
+				allowPreviewEmoticons : false,
+				allowImageUpload : true,
+	           	allowFileManager:true,
+	            uploadJson : '../fileUpload.do',
+	            fileManagerJson : '../manger.do',
+				items : [
+					'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+					'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+					'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+			});
+		});
+	</script>
+
 

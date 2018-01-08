@@ -35,6 +35,12 @@ $(function(){
 					else if(item.orderStatus==40){
 						str = "已收货";
 					}
+					else if(item.orderStatus==50){
+						str = "已退货";
+					}
+					else if(item.orderStatus==60){
+						str = "退货申请";
+					}
 					else if(item.orderStatus==90){
 						str = "失败";
 					}
@@ -109,6 +115,8 @@ $(function(){
 		   selectRowButtonOnly:true,
 		   toolbar:{items:[
 			          {text:"发货",icon:"add", click:update},
+			          {text:"退货",icon:"add", click:Returngoods},
+			          {text:"下载",icon:"add", click:Dows},
 			          ],
 		  
 		   }
@@ -117,6 +125,25 @@ $(function(){
 	ligerManager.loadData();
 });
 
+function Returngoods(){
+	
+	 var row = ligerManager.getSelectedRows();
+	 if(row.length!=1){
+		 $.ligerDialog.warn("请选择一行");
+		 return;
+	 }
+	 console.info(row);
+	  var abc= row[0]; 
+	  console.info(abc);
+	  var  orderId = abc.orderId;
+	  console.info(orderId);
+	  openWindow = $.ligerDialog.open({
+		url:"${ctx}/order/Returngoods.do?orderId="+orderId,
+		width: 600, height:500, showMax: true, showToggle: true, showMin: true, isResize: true, modal: true,
+        name:"updateUI",
+        title: "发货"
+	})
+}
 function update(){
 	
 	 var row = ligerManager.getSelectedRows();
@@ -132,9 +159,13 @@ function update(){
 	  openWindow = $.ligerDialog.open({
 		url:"${ctx}/order/delivery.html?orderId="+orderId,
 		width: 600, height:500, showMax: true, showToggle: true, showMin: true, isResize: true, modal: true,
-        name:"updateUI",
-        title: "发货"
+       name:"updateUI",
+       title: "发货"
 	})
+}
+function Dows(){
+	
+	window.location = '${ctx}/order/Xls.do';
 }
 	
 </script>

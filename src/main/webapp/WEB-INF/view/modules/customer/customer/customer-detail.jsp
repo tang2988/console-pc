@@ -65,15 +65,6 @@
         </tr>
         
         <tr>
-			<td align="right" class="l-table-edit-td">状态：</td>
-			<td align="left" class="l-table-edit-td">${customer.customerStatus }</td>
-			<td align="right" class="l-table-edit-td">是否合时代用户：</td>
-			<td align="left" class="l-table-edit-td">${customer.p2pFlag }</td>
-			<td align="right" class="l-table-edit-td">合时代用户名：</td>
-			<td align="left" class="l-table-edit-td">${customer.p2pUsername }</td>
-        </tr>
-        
-        <tr>
 			<td align="right" class="l-table-edit-td">我的推荐码：</td>
 			<td align="left" class="l-table-edit-td">${customer.recomCode }</td>
 			<td align="right" class="l-table-edit-td">推荐人：</td>

@@ -50,6 +50,7 @@ $(function(){
 		   toolbar:{items:[
 			          {text:"修改产品",icon:"add", click:update},
 			          {text:"添加产品",icon:"add", click:add},
+			          {text:"downloadExcel",icon:"add", click:downloadExcel},
 			          ],
 		  
 		   },
@@ -85,6 +86,10 @@ function add(){
        name:"addui",
        title: "添加"
 	})
+}
+
+function downloadExcel(){
+	window.location = '${ctx}/produ/findAllPageIntoXLS';
 }
 	
 </script>

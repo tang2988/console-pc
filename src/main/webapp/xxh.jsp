@@ -23,23 +23,7 @@
   </head>
   
   <body>
-     <div class="liger-treegrid" id="treegrid1" data="CustomersData" enabledEdit="true">
-         <ul class="liger-treegrid-columns">
-             <li name="CustomerID" width="200">CustomerID 
-                      <input class="liger-treegrid-editor" ltype="text" />
-             </li>
-             <li name="CompanyName" width="200">CompanyName
-                     <input class="liger-treegrid-editor" ltype="date" data-property="type:'checkbox'" />
-             </li>
-             <li display="Address">
-                 <ul class="liger-treegrid-columns">
-                     <li name="City" width="100">City</li>
-                     <li name="Address" width="100">Address</li>
-                     <li name="PostalCode" width="100">PostalCode</li>
-                 </ul>
-             </li>
-         </ul>
-         <div class= "liger-treegrid-detail"></div>
-      </div> 
+     123123
+    
   </body>
 </html>

@@ -23,11 +23,11 @@ var openWindow;
 var ligerManager;
 
             
-// 添加用户            
+           
 function add() {
   openWindow=$.ligerDialog.open({
             url: '${ctx}/Announcement/addAc', 
-            width: 600, height:500, showMax: true, showToggle: true, showMin: true, isResize: true, modal: true, 
+            width: 900, height:700, showMax: true, showToggle: true, showMin: true, isResize: true, modal: true, 
             name:"addUI",
             title: "添加"
 /*             , buttons: [
@@ -142,4 +142,6 @@ function update2(announcementId) {
     function f_reset(){
     	$("#searchbar").find(":input").not(":button,:submit,:reset,:hidden").val("").removeAttr("checked").removeAttr("selected");
     }
+ 
+ 
 </script>

@@ -16,7 +16,7 @@
     <!-- 启用MVC注解 -->
     <mvc:annotation-driven validator="validator">
         <mvc:message-converters>
-            <bean class="com.heshidai.gold.console.common.util.UTF8StringHttpMessageConverter"></bean>
+            <bean class="com.tang2988.gold.console.common.util.UTF8StringHttpMessageConverter"></bean>
         </mvc:message-converters>
     </mvc:annotation-driven>
     
@@ -26,7 +26,7 @@
         
     
 	<!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
-	<context:component-scan base-package="com.heshidai" />
+	<context:component-scan base-package="com.tang2988" />
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<description>视图模式配置</description>
@@ -42,7 +42,7 @@
 	</bean>
     
 	<bean id="customExceptionHandler"
-		class="com.heshidai.gold.console.common.exception.CustomExceptionHandler" />
+		class="com.tang2988.gold.console.common.exception.CustomExceptionHandler" />
 
 	<bean
 		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
@@ -64,11 +64,13 @@
 	
 	<!-- 拦截器配置 -->
 	<mvc:interceptors>
-		<bean class="com.heshidai.gold.console.module.sys.interceptor.LogInterceptor" />
+		<bean class="com.tang2988.gold.console.module.sys.interceptor.LogInterceptor" />
 	</mvc:interceptors>
 
 <!-- 	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor">
 		<property name="proxyTargetClass" value="true" />
 	</bean> -->
     
+    
+    <import resource="classpath:dubbo-consumer-zk.xml"/>
 </beans>

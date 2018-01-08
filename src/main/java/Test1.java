@@ -5,8 +5,8 @@ import java.util.Date;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.heshidai.gold.console.module.info.dao.MediaDao;
-import com.heshidai.gold.console.module.sys.entity.Media;
+import com.tang2988.gold.console.module.info.dao.MediaDao;
+import com.tang2988.gold.console.module.sys.entity.Media;
 
 public class Test1 {
 	public static void main(String[] args) {

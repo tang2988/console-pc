@@ -17,7 +17,7 @@
 		/> -->
 
 	<!-- 使用Annotation自动注册Bean，解决事物失效问题：在主容器中不扫描@Controller注解，在SpringMvc中只扫描@Controller注解。 -->
-	<context:component-scan base-package="com.heshidai"><!-- base-package 
+	<context:component-scan base-package="com.tang2988"><!-- base-package 
 			如果多个，用“,”分隔 -->
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
@@ -46,7 +46,7 @@
 	</bean>
 
 	<bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.heshidai.gold.console.common.dao,com.heshidai.gold.console.module.sys.dao" />
+		<property name="basePackage" value="com.tang2988.gold.console.common.dao,com.tang2988.gold.console.module.sys.dao" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 

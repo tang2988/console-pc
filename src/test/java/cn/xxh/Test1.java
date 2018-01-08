@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.heshidai.gold.console.module.info.dao.NoticeDAO;
-import com.heshidai.gold.console.module.sys.entity.Notice;
+import com.tang2988.gold.console.module.info.dao.NoticeDAO;
+import com.tang2988.gold.console.module.sys.entity.Notice;
 
 public class Test1 {
 	public static void main(String[] args) {
@@ -15,6 +15,7 @@ public class Test1 {
 				"spring-context.xml");
 		NoticeDAO noticeDAO = (NoticeDAO) ctx.getBean("noticeDAO");
 		List<Notice> lst = noticeDAO.queryForPage(1, 2);
+		System.out.println(lst);
 	}
 
 }

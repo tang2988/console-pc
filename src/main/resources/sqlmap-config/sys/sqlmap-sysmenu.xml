@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.heshidai.gold.console.module.sys.dao.MenuDAO">
+<mapper namespace="com.tang2988.gold.console.module.sys.dao.MenuDAO">
 	
     <!-- 根据用户id查询权限集合 -->
 	<select id="findByUserId" resultType="string">
@@ -15,7 +15,7 @@
 	</select>
     
     <!-- 根据角色id、父目录id查询权限-->
-    <select id="findPermission" resultType="com.heshidai.gold.console.module.sys.entity.SysMenu">
+    <select id="findPermission" resultType="com.tang2988.gold.console.module.sys.entity.SysMenu">
         select a.id,
                case when a.parentId='1' then '0'
                     else a.parentId end as parentId,

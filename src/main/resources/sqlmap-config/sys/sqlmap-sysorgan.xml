@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<mapper namespace="com.heshidai.gold.console.module.sys.dao.OrganDAO">
+<mapper namespace="com.tang2988.gold.console.module.sys.dao.OrganDAO">
 	
     <!-- 用户信息字段 -->
     <sql id="organFields">
@@ -11,7 +11,7 @@
     </sql>
     
     <!-- 根据父id查询组织机构  -->
-    <select id="findByParentId" resultType="com.heshidai.gold.console.module.sys.entity.SysOrgan">
+    <select id="findByParentId" resultType="com.tang2988.gold.console.module.sys.entity.SysOrgan">
         select <include refid="organFields"/> 
         from t_sys_organ a
         where a.parentId=#{parentId}
@@ -42,7 +42,7 @@
     </update>
     
     <!-- 查询单条 -->
-    <select id="findById" resultType="com.heshidai.gold.console.module.sys.entity.SysOrgan">
+    <select id="findById" resultType="com.tang2988.gold.console.module.sys.entity.SysOrgan">
         select <include refid="organFields"/>,
                case when b.id is not null then b.name
                     else '一级部门' end parentName
@@ -52,7 +52,7 @@
     </select>
     
     <!-- 查询部门名称是否已存在 -->
-    <select id="getByNameAndParentId" resultType="com.heshidai.gold.console.module.sys.entity.SysOrgan">
+    <select id="getByNameAndParentId" resultType="com.tang2988.gold.console.module.sys.entity.SysOrgan">
        select <include refid="organFields"/> 
        from t_sys_organ a
        where a.name=#{name}

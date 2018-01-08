@@ -66,7 +66,10 @@ body {
 			<tr>
 				<td align="right" class="l-table-edit-td">状态:&nbsp;&nbsp;<span
 					style="color:red;">*</span></td>
-				<td align="left" class="l-table-edit-td"><input name="rechargeStatus" type="text" id="rechargeStatus" value="${araay.rechargeStatus}" />
+				<td align="left" class="l-table-edit-td"><select  name="rechargeStatus">
+				<option value="20">20</option></select>
+				
+				
 					
 					</td>
 			</tr>

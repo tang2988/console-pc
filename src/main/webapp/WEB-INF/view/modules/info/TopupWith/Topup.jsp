@@ -82,7 +82,7 @@ $(function(){
 		   pageSize:7,
 		   page:1,
 		   usePager:true,
-		   url:"${ctx}/Topupwith/Topup",
+		   url:"${ctx}/topuprecharge/Topuprecharge.do",
 		   selectRowButtonOnly:true,
 		   dateFormat: "yyyy-MM-dd",
 		   

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<mapper namespace="com.heshidai.gold.console.module.sys.dao.FollowRecordDAO">
+<mapper namespace="com.tang2988.gold.console.module.sys.dao.FollowRecordDAO">
 
     <!-- 查询跟进记录数量 -->
     <select id="findCount" resultType="int">
@@ -12,7 +12,7 @@
     </select>
 
     <!-- 查询跟进记录列表 -->
-    <select id="findList" resultType="com.heshidai.gold.console.module.sys.entity.FollowRecord">
+    <select id="findList" resultType="com.tang2988.gold.console.module.sys.entity.FollowRecord">
         select 
               a.id,
               c.loginName,
@@ -36,7 +36,7 @@
     </sql>
 
     <!-- 新增跟进记录 -->
-    <insert id="insert" parameterType="com.heshidai.gold.console.module.sys.entity.FollowRecord">
+    <insert id="insert" parameterType="com.tang2988.gold.console.module.sys.entity.FollowRecord">
         insert into
         t_sys_follow_record(customerId, userId, type, followTime,
         nextVisitTime, remark, bizId, followStatus)
@@ -52,7 +52,7 @@
     </select>
     
     <!-- 修改跟进记录 -->
-    <insert id="update" parameterType="com.heshidai.gold.console.module.sys.entity.FollowRecord">
+    <insert id="update" parameterType="com.tang2988.gold.console.module.sys.entity.FollowRecord">
         update t_sys_follow_record
         set remark=#{remark},
             followStatus=#{followStatus}
@@ -61,7 +61,7 @@
     </insert>
     
     <!-- 跟进主键查询数据 -->
-    <select id="findById" resultType="com.heshidai.gold.console.module.sys.entity.FollowRecord">
+    <select id="findById" resultType="com.tang2988.gold.console.module.sys.entity.FollowRecord">
         select a.`id`, 
                a.`bizId`, 
                a.`customerId`, 

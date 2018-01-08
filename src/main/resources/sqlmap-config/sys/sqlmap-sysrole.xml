@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<mapper namespace="com.heshidai.gold.console.module.sys.dao.RoleDAO">
+<mapper namespace="com.tang2988.gold.console.module.sys.dao.RoleDAO">
 
     <sql id="sqlField">
                a.id, 
@@ -19,7 +19,7 @@
     </select>
 
     <!-- 根据项目id查询对应的角色集合 -->
-    <select id="findList" resultType="com.heshidai.gold.console.module.sys.entity.SysRole">
+    <select id="findList" resultType="com.tang2988.gold.console.module.sys.entity.SysRole">
         select <include refid="sqlField"/>
         from t_sys_role a
         <include refid="findListWhere"/>
@@ -37,7 +37,7 @@
     </sql>
 
     <!-- 根据用户id查询用户对应角色 -->
-    <select id="findByUserId" resultType="com.heshidai.gold.console.module.sys.entity.SysRole">
+    <select id="findByUserId" resultType="com.tang2988.gold.console.module.sys.entity.SysRole">
         select <include refid="sqlField"/>
         from t_sys_role a
         join t_sys_user_role b on a.id = b.roleId
@@ -59,7 +59,7 @@
     </insert>
     
     <!-- 根据角色id查询角色 -->
-    <select id="findById" resultType="com.heshidai.gold.console.module.sys.entity.SysRole">
+    <select id="findById" resultType="com.tang2988.gold.console.module.sys.entity.SysRole">
         select <include refid="sqlField"/>
         from t_sys_role a
         where a.id=#{id}
@@ -87,7 +87,7 @@
     </delete>
     
     <!-- 查询全部角色，并查询当前用户具备的角色 -->
-    <select id="findAllRoleByUserId" resultType="com.heshidai.gold.console.module.sys.entity.SysRole">
+    <select id="findAllRoleByUserId" resultType="com.tang2988.gold.console.module.sys.entity.SysRole">
         select a.id,
                a.name,
                case when b.userId is not null then '1'
@@ -97,7 +97,7 @@
     </select>
     
     <!-- 查询角色名称是否存在 -->
-    <select id="getByRoleName" resultType="com.heshidai.gold.console.module.sys.entity.SysRole">
+    <select id="getByRoleName" resultType="com.tang2988.gold.console.module.sys.entity.SysRole">
         select <include refid="sqlField"/>
         from t_sys_role a 
         where a.name=#{name}

@@ -84,7 +84,7 @@ $(function(){
 		   pageSize:5,
 		   page:1,
 		   usePager:true,
-		   url:"${ctx}/Topupwith/withform.do",
+		   url:"${ctx}/Withdrawalform/with.do",
 		   selectRowButtonOnly:true,
 		   dateFormat: "yyyy-MM-dd",
 		   toolbar:{items:[

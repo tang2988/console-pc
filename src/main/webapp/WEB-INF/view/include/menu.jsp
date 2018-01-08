@@ -15,14 +15,22 @@
             <ul class="menulist">
                         <li menuid="106" menulink="${ctx}/bullion/order/findListUI" menuname="购物订单"><span>购物订单</span></li>
             		    <li menuid="107" menulink="${ctx}/order/orderui" menuname="金饰订单"><span>金饰订单</span></li>
-            		
+            		    <li menuid="108" menulink="${ctx}/steady/steadyUi" menuname="稳盈金订单"><span>稳盈金订单</span></li>
+            			
             </ul>
         </div>
+        
+        <div title="产品管理">
+            <ul class="menulist">
+                       <li menuid="109" menulink="${ctx}/productloss/findlossui" menuname="产品列表"><span>稳盈金产品</span></li>
+            </ul>
+        </div>
+        
         <div title="客户管理">
             <ul class="menulist">
                         <li menuid="201" menulink="${ctx}/User/userui" menuname="会员管理"><span>会员管理</span></li>
             </ul>
-        </div>
+        </div> 
         <div title="信息管理">
             <ul class="menulist">
                     <li menuid="301" menulink="${ctx}/notice/findListUI" menuname="平台公告"><span>平台公告</span></li>
@@ -51,7 +59,7 @@
         </div>
     </div>
 
-
+ 
     <div position="center" id="home">
         <%@ include file="home.jsp"%>
     </div>
@@ -76,7 +84,7 @@
             //注册单击事件
             $(".menulist li").live("click", function () {
                     var vli = $(this);
-                    var tabid = vlienuid");
+                    var tabid = vli.attr("menuid");
                     var link = vli.attr("menulink");
                     vli.attr("tabid", tabid);
                     if (!link) return;

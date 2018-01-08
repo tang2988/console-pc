@@ -1,8 +1,8 @@
 #BASE hsdgold-console-pc Dockerfile
-FROM hub.heshidai.com/base/tomcat/centos7-oracle8jre-tomcat8-confenv
+FROM hub.tang2988.com/base/tomcat/centos7-oracle8jre-tomcat8-confenv
 
 #MAINTAINER info
-MAINTAINER Ford.CHEN <fangri.chen@heshidai.com>
+MAINTAINER Ford.CHEN <fangri.chen@tang2988.com>
 
 # COPY APP files
 ADD target/hsdgold-console-pc/  /opt/webapp/

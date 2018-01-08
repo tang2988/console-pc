@@ -14,7 +14,7 @@
         </param-value>
 	</context-param>
 
-    <!-- Spring监听 -->
+	<!-- Spring监听 -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
@@ -22,7 +22,7 @@
 		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
 	</listener>
 
-    <!-- 编码过滤器 -->
+	<!-- 编码过滤器 -->
 	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -57,10 +57,10 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
-    <!-- 获取验证码请求地址 -->
+	<!-- 获取验证码请求地址 -->
 	<servlet>
 		<servlet-name>ValidateCodeServlet</servlet-name>
-		<servlet-class>com.heshidai.gold.console.common.web.ValidateCodeServlet</servlet-class>
+		<servlet-class>com.tang2988.gold.console.common.web.ValidateCodeServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ValidateCodeServlet</servlet-name>
@@ -81,7 +81,7 @@
 		<error-code>404</error-code>
 		<location>/WEB-INF/view/error/404.jsp</location>
 	</error-page>
-    
+
 	<!-- 默认跳转到根目录下的页面，在这里为index.jsp -->
 	<welcome-file-list>
 		<welcome-file>/index</welcome-file>
